@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lato", system-ui, sans-serif;
+  --color-brand: #2e3da3;
+  --color-brand-dark: #243187;
+  --color-brand-light: #5165e1;
+  --color-brand-soft: #8996eb;
+  --color-ink: #1e2024;
+  --color-gray-100: #f9fafa;
+  --color-gray-200: #e3e5e8;
+  --color-gray-500: #858b99;
+  --color-gray-600: #535964;
+  --color-feedback-danger: #d03e3e;
+  --color-feedback-open: #cc3d6a;
+  --color-feedback-progress: #355ec5;
+  --color-feedback-done: #508b26;
+  --color-sidebar: #151619;
+}
+
+body {
+  @apply bg-gray-100 text-ink antialiased;
+  font-family: "Lato", system-ui, sans-serif;
+}
+
+.input {
+  @apply w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20;
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-lg bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-sidebar disabled:opacity-50;
+}
+.btn-ghost {
+  @apply inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition hover:bg-gray-50 disabled:opacity-50;
+}
+.btn-danger {
+  @apply inline-flex items-center justify-center rounded-lg bg-feedback-danger px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90 disabled:opacity-50;
+}
+.label {
+  @apply mb-1 block text-xs font-bold uppercase tracking-wide text-gray-500;
+}
